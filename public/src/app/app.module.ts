@@ -1,0 +1,22 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { QuoteBoxComponent } from './components/quote-box/quote-box.component';
+import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    QuoteBoxComponent,
+    JumbotronComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
