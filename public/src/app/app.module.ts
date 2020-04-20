@@ -5,16 +5,22 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuoteBoxComponent } from './components/quote-box/quote-box.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     QuoteBoxComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

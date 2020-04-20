@@ -36,7 +36,7 @@ app.delete('/quotes/:quoteId', (req, res) => {
 });
 
 app.post('/quotes', (req, res) => {
-    const quote = new Quote({quotee:req.body.quotee, body:req.body.body});
+    const quote = new Quote({quotee:req.body.quotee, body:req.body.body, dateQuoted:new Date(req.body.dateQuoted)});
     quote.save()
         .then(quote => res.send(quote))
         .catch((err) => console.log(err));
