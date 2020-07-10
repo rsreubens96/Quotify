@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
+//  Injects as a table (probs)
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class WebService {
   readonly ROOT_URL;
   constructor(private http: HttpClient) {
