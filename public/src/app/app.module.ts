@@ -8,6 +8,8 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { ModalComponent } from './components/add_quote_modal/modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HomeComponent } from './components/home/home.component';
     NavbarComponent,
     QuoteBoxComponent,
     JumbotronComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
