@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { QuoteService } from 'src/app/services/quote.service';
-import { Quote } from '@angular/compiler';
 import { FormControl } from '@angular/forms'
 
 
@@ -27,7 +26,6 @@ export class ModalComponent implements OnInit {
   }
 
   addQuote() {
-    let dateCreated = new Date().toISOString();
     let dateQuoted = this.getDateQuotedAsISO();
     let quoteBody = this.quoteBody.value;
     let quotee = this.quotee.value;

@@ -8,13 +8,13 @@
 
 .quote-box {
   h2 {
-    font-size:200%;
+    font-size:150%;
     padding-bottom: 1em;
     font-weight: bold;
     overflow: hidden;
   }
   p{
-    font-size: 2em;
+    font-size: 1.5em;
   }
   font-family: 'Caveat', cursive;
   background-color: #f5b355;
@@ -34,17 +34,17 @@
   
 }
 
-.quote-box:hover, .quote-box:focus{
-  @extend .quote-box;
-  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-  box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.10);
-  -o-transform: scale(1.10);
-  position:relative;
-  z-index:5;
-}
+// .quote-box:hover, .quote-box:focus{
+//   @extend .quote-box;
+//   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+//   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+//   box-shadow:10px 10px 7px rgba(0,0,0,.7);
+//   -webkit-transform: scale(1.05);
+//   -moz-transform: scale(1.10);
+//   -o-transform: scale(1.10);
+//   position:relative;
+//   z-index:5;
+// }
 
 
 

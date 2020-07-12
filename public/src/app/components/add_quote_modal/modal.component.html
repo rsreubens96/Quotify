@@ -1,6 +1,6 @@
 
   <!-- button to trigger modal-->
-  <button type="button" href="#" class="btn btn-info btn-lg my-2" (click)="openModal(content)">Add a Quote</button>
+  <button type="button" href="#" class="text-muted btn-dark btn-lg" (click)="openModal(content)">Add a Quote</button>
   
   <!-- Modal -->
   <ng-template #content let-modal>
@@ -36,7 +36,7 @@
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-info" (click)="addQuote()" href="/">Add</button>
+      <button type="button" class="btn btn-dark" (click)="addQuote()" href="/">Add</button>
       <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Cancel</button>
     </div>
   </ng-template>

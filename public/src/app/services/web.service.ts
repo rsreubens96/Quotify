@@ -23,11 +23,11 @@ export class WebService {
     return this.http.post(`${this.ROOT_URL}/${uri}`, payload);
   }
 
-  patch(uri: string, payload: Object) {
-    return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
+  patch(uri: string, quoteId: string, payload: Object) {
+    return this.http.patch(`${this.ROOT_URL}/${uri}/${quoteId}`, payload);
   }
 
-  delete(uri: string) {
-    return this.http.delete(`${this.ROOT_URL}/${uri}`);
+  delete(uri: string, quoteId: string) {
+    return this.http.delete(`${this.ROOT_URL}/${uri}/${quoteId}`);
   }
 }
