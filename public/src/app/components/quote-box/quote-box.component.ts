@@ -16,4 +16,9 @@ export class QuoteBoxComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayDateQuoted() {
+    let date = new Date(this.quote.dateQuoted).toString().split(" ");
+    return date[0] + " " + date[1] + " " + date[2] + " " + date[3];
+  }
+
 } 
