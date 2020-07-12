@@ -14,8 +14,8 @@ export class QuoteService {
     return this.webService.get('quotes');
   }
 
-  createQuote(quotee: string, body: string) {
-    return this.webService.post('quotes', { quotee, body })
+  createQuote(quotee: string, body: string, dateQuoted: string) {
+    return this.webService.post('quotes', { quotee, body, dateQuoted });
   }
   
 
