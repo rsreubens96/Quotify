@@ -1,7 +1,7 @@
 
   <!-- button to trigger modal-->
   <button type="button" href="#" class="text-muted btn-dark btn-lg" (click)="openModal(content)">Add a Quote</button>
-  
+
   <!-- Modal -->
   <ng-template #content let-modal>
     <div class="modal-header">
@@ -12,27 +12,27 @@
     </div>
     <div class="modal-body">
       <form>
-      
+
         <!-- Quotee-->
         <div class="form-group">
           <label for="quotee">Who said it?</label>
           <input type="text" class="form-control" id="quotee" [formControl]="quotee">
         </div>
-        
+
         <!-- Quote body-->
         <div class="form-group">
           <label for="quoteBody">What did they say?</label>
-          <textarea class="form-control" [formControl]="quoteBody" id="quoteBody" rows="3"></textarea> 
+          <textarea class="form-control" [formControl]="quoteBody" id="quoteBody" rows="3"></textarea>
        </div>
 
         <!-- Date quoted-->
         <div class="form-group">
           <label for="dateOfBirth">When was it said?</label>
           <div class="input-group">
-            <input id="dateOfBirth" class="form-control" (click)="dp.toggle()" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker" [formControl]="dateQuotedAsString">
+            <input id="dateOfBirth" class="form-control" (click)="dp.toggle()" placeholder="dd-mm-yyyy" name="dp" ngbDatepicker #dp="ngbDatepicker" [formControl]="dateQuotedAsString">
           </div>
         </div>
-        
+
       </form>
     </div>
     <div class="modal-footer">
