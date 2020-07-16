@@ -40,12 +40,12 @@ export class ModalComponent implements OnInit {
       }
     )
 
-    
+
   }
 
   private getDateQuotedAsISO() {
     let date = this.dateQuotedAsString.value;
-    return new Date(date.year, date.month, date.day).toISOString();
+    return new Date(date.year, date.month - 1, date.day).toISOString();
   }
 
 }
