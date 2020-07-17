@@ -1,17 +1,18 @@
 
 const express = require('express');
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+const mongoose = require('mongoose');
 const Quote = require('./db/models/quote');
 
-//  Connection URL
-const url = 'mongodb://admin:$[password]@localhost:3000/quotify-quotes?authSource=https://cloud.mongodb.com/v2/5f1109eab5dc041e9afe0500#clusters/detail/quotify-quotes';
 
-MongoClient.connect(url, function(err, client) {
-    assert.equal(null, err);
-    client.close();
-  });
+//  Connects to the local database called test
+mongoose.connect('mongodb+srv://database:nostrat@quotify-quotes.9pswg.mongodb.net/quotes?retryWrites=true&w=majority', {useNewUrlParser: true});
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () =>console.log("We are connected!"))
+
 
 
 
