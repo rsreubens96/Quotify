@@ -1,6 +1,0 @@
-$colour-background: #dad6d6 !default;
-$colour-red: #a61c3c !default;
-@if var(--darkTheme) {
-  $colour-background: #000000;
-  $colour-red: #FFFFFF;
-}

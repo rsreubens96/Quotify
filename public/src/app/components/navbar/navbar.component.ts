@@ -9,12 +9,12 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   darkTheme(): void {
-    let root = document.documentElement; // #999999
-    if (getComputedStyle(root).getPropertyValue('--darkTheme') == "1") {
-      root.style.setProperty('--darkTheme', "0");
-    } else {
-      root.style.setProperty('--darkTheme', "1");
+    let htmlTag = document.getElementsByTagName("html")[0];
+    if (htmlTag.hasAttribute("data-theme")) {
+      htmlTag.removeAttribute("data-theme");
+      return
     }
+    htmlTag.setAttribute("data-theme", "dark");
   }
 
   ngOnInit(): void {

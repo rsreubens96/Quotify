@@ -7,14 +7,32 @@
 
   :root {
     --jumbotron-padding-y: 3rem;
-    --darkTheme: "";
+    --colour-background: #dad6d6;
+    --colour-red: #a61c3c;
+    --colour-black: #23272B;
+    --colour-light-gray: #999;
+    --colour-white: #FFF;
+    --colour-postit: #f5b355;
+    --colour-shadow1: rgba(33,33,33,1);
+    --colour-shadow2: rgba(33,33,33,0.7);
+
+
+  }
+  html[data-theme='dark'] {
+    --colour-background: #23272B;
+    --colour-red: #501616;
+    --colour-black: #dad6d6;
+    --colour-light-gray: #5e5e5e;
+    --colour-white: #0d0d0d;
+    --colour-shadow1: rgba(222,222,222,1);
+    --colour-shadow2: rgba(222,222,222,0.7);
   }
 
   .jumbotron {
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
     margin-bottom: 0;
-    background-color: #dad6d6
+    background-color: var(--colour-background);
   }
   @media (min-width: 768px) {
     .jumbotron {
