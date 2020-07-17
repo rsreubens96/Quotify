@@ -1,19 +1,7 @@
-
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 const Quote = require('./db/models/quote');
-
-
-//  Connects to the local database called test
-mongoose.connect('mongodb+srv://database:nostrat@quotify-quotes.9pswg.mongodb.net/quotes?retryWrites=true&w=majority', {useNewUrlParser: true});
-
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () =>console.log("We are connected!"))
-
-
+const mongoose = require('./db/mongoose');
 
 
 app.use(express.json());
