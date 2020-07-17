@@ -43,7 +43,13 @@ export class ModalComponent implements OnInit {
 
   private getDateQuotedAsISO() {
     let date = this.dateQuotedAsString.value;
-    return new Date(date.year, date.month - 1, date.day).toISOString();
+    if (typeof(date) == "string") {
+      let dates = date.split("-");
+      return new Date(parseInt(dates[2]), parseInt(dates[1]) - 1, parseInt(dates[0])).toISOString();
+    } else {
+      return new Date(date.year, date.month - 1, date.day).toISOString();
+    }
+
   }
 
 }
