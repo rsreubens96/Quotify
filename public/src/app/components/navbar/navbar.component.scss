@@ -1,6 +1,5 @@
+@import '../globals';
 @import "../../../styles.scss";
-@import '../globals.scss';
-
 .site-header {
     background-color: $colour-red;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
