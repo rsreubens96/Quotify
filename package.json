@@ -1,20 +1,24 @@
 {
-    "name": "backend",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "backend": "cd backend && node server.js",
-      "public": "cd public && ng serve",
-      "preinstall": "npm install -g angular-cli",
-      "start": "concurrently \"npm run public\" \"npm run backend\" "
-    },
-    "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
-    "license": "ISC",
-    "dependencies": {
-      "concurrently" : "^1.0.0",
-      "express": "^4.17.1",
-      "mongoose": "^5.9.9"
-    }
+  "name": "quotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "cd backend && node server.js",
+    "public": "cd public && ng serve",
+    "preinstall": "npm install -g angular-cli",
+    "start": "concurrently \"npm run public\" \"npm run backend\" "
+  },
+  "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^1.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
+}
