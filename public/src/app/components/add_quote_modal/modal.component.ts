@@ -13,9 +13,9 @@ export class ModalComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private quoteService: QuoteService) {}
 
-  quoteBody = new FormControl()
-  quotee = new FormControl()
-  dateQuotedAsString = new FormControl()
+  quoteBody = new FormControl();
+  quotee = new FormControl();
+  dateQuotedAsString = new FormControl();
 
 
   ngOnInit(): void {

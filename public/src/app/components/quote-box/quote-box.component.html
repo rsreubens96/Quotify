@@ -1,12 +1,50 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="btn-group">
-  <button class="btn"><i class="btn-sm fa fa-pencil-square-o" aria-hidden="true"></i></button>
+  <button class="btn"><i class="btn-sm fa fa-pencil-square-o" aria-hidden="true" (click)="openModal(content)"></i></button>
   <button class="btn"><i class="btn-sm fa fa-trash" aria-hidden="true" (click)="deleteQuote()"></i></button>
 </div>
 <div class="quote-box">
   <h2>
-    {{quote.quotee}} <br> {{displayDateQuoted()}} 
+    {{quote.quotee}} <br> {{displayDateQuoted()}}
   </h2>
   <p> "{{quote.body}}"</p>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Edit quote</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+
+      <!-- Quotee-->
+      <div class="form-group">
+        <label for="quotee">Who said it?</label>
+        <input type="text" class="form-control" id="quotee" [formControl]="quotee">
+      </div>
+
+      <!-- Quote body-->
+      <div class="form-group">
+        <label for="quoteBody">What did they say?</label>
+        <textarea class="form-control" [formControl]="quoteBody" id="quoteBody" rows="3"></textarea>
+     </div>
+
+      <!-- Date quoted-->
+      <div class="form-group">
+        <label for="dateOfBirth">When was it said?</label>
+        <div class="input-group">
+          <input id="dateOfBirth" class="form-control" placeholder="Fuck you" (click)="dp.toggle()" name="dp" ngbDatepicker #dp="ngbDatepicker" [formControl]="dateQuotedAsString">
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-dark" (click)="patchQuote()" href="/">Edit</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Cancel</button>
+  </div>
+</ng-template>
