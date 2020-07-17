@@ -41,23 +41,24 @@
 }
 
 .modal{
-  background-color: var(--colour-background)
+    background-color: var(--colour-background);
 }
 .modal-body {
-  background-color: var(--colour-background)
+    background-color: var(--colour-background);
+    color: var(--colour-black);
 }
 .modal-footer {
-  background-color: var(--colour-background)
+    background-color: var(--colour-background);
 }
 .modal-header {
-  background-color: var(--colour-black);
-  color: var(--colour-background);
+    background-color: var(--colour-black);
+    color: var(--colour-background);
 }
 
 .text-muted {
-  color: car(--colour-white);
+    color: var(--colour-white);
+    background-color: var(--colour-black);
 }
-
 // .quote-box:hover, .quote-box:focus{
 //   @extend .quote-box;
 //   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
