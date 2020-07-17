@@ -1,15 +1,17 @@
+@import '../globals.scss';
+
 .modal{
-    background-color: #dad6d6
+    background-color: $colour-background;
 }
 .modal-body {
-    background-color: #dad6d6
+    background-color: $colour-background;
 }
 .modal-footer {
-    background-color: #dad6d6
+    background-color: $colour-background;
 }
 .modal-header {
-    background-color: #a61c3c;
-    color: #dad6d6;
+    background-color: $colour-red;
+    color: $colour-background;
 }
 
 .text-muted {

@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 app.get('/quotes', (req, res) => {
     Quote.find({})
-        .then(quotes => res.send(quotes))
+        .then(quotes => res.send(quotes));
         .catch((err) => console.log(err));
 });
 
