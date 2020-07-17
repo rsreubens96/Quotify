@@ -39,8 +39,6 @@ export class ModalComponent implements OnInit {
         console.log(err);
       }
     )
-
-
   }
 
   private getDateQuotedAsISO() {

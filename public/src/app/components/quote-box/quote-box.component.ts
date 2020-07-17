@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import Quote from 'src/app/models/quote';
 import { QuoteService } from 'src/app/services/quote.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from 'src/app/components/add_quote_modal/modal.component';
 import { FormControl } from '@angular/forms'
 
 
@@ -36,7 +35,6 @@ export class QuoteBoxComponent implements OnInit {
           window.location.reload();
         },
         (err) => {
-
         }
       );
     }
@@ -48,6 +46,7 @@ export class QuoteBoxComponent implements OnInit {
     this.dateQuotedAsString = new FormControl(this.dateToString());
     this.modalService.open(content, { size: 'lg' });
   }
+
   patchQuote() {
     let dateQuoted = this.getDateQuotedAsISO();
     let quoteBody = this.quoteBody.value;
@@ -60,13 +59,14 @@ export class QuoteBoxComponent implements OnInit {
       err => {
         console.log(err);
       }
-    )
-
+    );
   }
+  
   private getDateQuotedAsISO() {
     let date = this.dateQuotedAsString.value;
     return new Date(date.year, date.month - 1, date.day).toISOString();
   }
+
   private dateToString() {
     let date = new Date(this.quote.dateQuoted);
     return `${date.getDate().toString()}-${(date.getMonth() + 1).toString()}-${date.getFullYear().toString()}`;
