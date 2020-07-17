@@ -2,15 +2,14 @@
     <app-navbar></app-navbar>
     <main role="main">
       <app-jumbotron></app-jumbotron>
-      
       <div class="background py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4" *ngFor="let quote of quotes">
               <app-quote-box [quote]="quote"></app-quote-box>
             </div>
-            
-          </div>         
+
+          </div>
         </div>
       </div>
 
