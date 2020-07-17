@@ -1,8 +1,8 @@
 @import "../../../styles.scss";
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-.box-shadow { 
-    background-color: #f5b355;
+.box-shadow {
+    background-color: var(--colour-postit);
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
  }
 
@@ -17,7 +17,7 @@
     font-size: 1.5em;
   }
   font-family: 'Caveat', cursive;
-  background-color: #f5b355;
+  background-color: var(--colour-postit);
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
   overflow-y:auto;
   overflow-wrap: break-word;
@@ -26,30 +26,36 @@
   padding:1em;
   margin-bottom:2em;
   /* Firefox */
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -moz-box-shadow:5px 5px 7px var(--colour-shadow1);
   /* Safari+Chrome */
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-box-shadow: 5px 5px 7px var(--colour-shadow2);
   /* Opera */
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  
+  box-shadow: 5px 5px 7px var(--colour-shadow2);
+
+}
+.fa-pencil-square-o {
+  color: var(--colour-black);
+}
+.fa-trash {
+  color: var(--colour-black);
 }
 
 .modal{
-  background-color: #dad6d6
+  background-color: var(--colour-background)
 }
 .modal-body {
-  background-color: #dad6d6
+  background-color: var(--colour-background)
 }
 .modal-footer {
-  background-color: #dad6d6
+  background-color: var(--colour-background)
 }
 .modal-header {
-  background-color: #23272B;
-  color: #dad6d6;
+  background-color: var(--colour-black);
+  color: var(--colour-background);
 }
 
 .text-muted {
-  color: white;
+  color: car(--colour-white);
 }
 
 // .quote-box:hover, .quote-box:focus{

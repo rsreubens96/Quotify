@@ -1,15 +1,14 @@
 @import "../../../styles.scss";
-
 .site-header {
-    background-color: #23272B;
+    background-color: var(--colour-black);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
   }
   .site-header a {
-    color: #999;
+    color: var(--colour-light-gray);
     transition: ease-in-out color .15s;
   }
   .site-header a:hover {
-    color: #fff;
+    color: var(--colour-white);
     text-decoration: none;
   }
