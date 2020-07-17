@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend": "cd backend && node server.js",
     "public": "cd public && ng serve",
-    "preinstall": "npm install -g angular-cli",
+    "preinstall": "npm install -g angular-cli && npm install mongodb --save ",
     "start": "concurrently \"npm run public\" \"npm run backend\" "
   },
   "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
