@@ -1,7 +1,10 @@
+
 const express = require('express');
 const app = express();
 const mongoose = require('./db/mongoose');
 const Quote = require('./db/models/quote');
+
+
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -42,4 +45,4 @@ app.post('/quotes', (req, res) => {
         .catch((err) => console.log(err));
 });
 
-app.listen(3000, () => console.log("Server Connected on port 3000"));
+app.listen(process.env.PORT || 3000, () => console.log("Server Connected on port 3000")); 
