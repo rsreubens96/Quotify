@@ -2,9 +2,8 @@
 @import "../node_modules/bootstrap-scss/bootstrap.scss";
 
 .background {
-    background-color: #dad6d6
+    background-color: var(--colour-background);
   }
-
   :root {
     --jumbotron-padding-y: 3rem;
     --colour-background: #dad6d6;
@@ -15,8 +14,7 @@
     --colour-postit: #f5b355;
     --colour-shadow1: rgba(33,33,33,1);
     --colour-shadow2: rgba(33,33,33,0.7);
-
-
+    --colour-modal-header: #23272B;
   }
   html[data-theme='dark'] {
     --colour-background: #23272B;
@@ -24,10 +22,18 @@
     --colour-black: #dad6d6;
     --colour-light-gray: #5e5e5e;
     --colour-white: #0d0d0d;
-    --colour-shadow1: rgba(222,222,222,1);
-    --colour-shadow2: rgba(222,222,222,0.7);
+    --colour-shadow1: rgba(0,0,0,1);
+    --colour-shadow2: rgba(0,0,0,0.7);
+    --colour-modal-header: #474f57;
   }
-
+  html {
+    background-color: var(--colour-background) !important;
+    height: 100%;
+  }
+  body {
+    background-color: var(--colour-background) !important;
+    height: 100%;
+  }
   .jumbotron {
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
