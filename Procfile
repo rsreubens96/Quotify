@@ -1,2 +1,2 @@
-server: cd backend && node app.js
-web: cd public && npm start
+server: cd backend && node server.js
+web: cd public && ng serve
