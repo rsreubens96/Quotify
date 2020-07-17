@@ -1,8 +1,18 @@
 
 const express = require('express');
 const app = express();
-const mongoose = require('./db/mongoose');
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
 const Quote = require('./db/models/quote');
+
+//  Connection URL
+const url = 'mongodb://admin:$[password]@localhost:3000/quotify-quotes?authSource=https://cloud.mongodb.com/v2/5f1109eab5dc041e9afe0500#clusters/detail/quotify-quotes';
+
+MongoClient.connect(url, function(err, client) {
+    assert.equal(null, err);
+    client.close();
+  });
+
 
 
 app.use(express.json());
@@ -45,4 +55,4 @@ app.post('/quotes', (req, res) => {
         .catch((err) => console.log(err));
 });
 
-app.listen(process.env.PORT || 3000, () => console.log("Server Connected on port 3000")); 
+app.listen(process.env.PORT || 3000, () => console.log("Server Connected to default PORT")); 
