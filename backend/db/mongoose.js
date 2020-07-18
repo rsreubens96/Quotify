@@ -7,6 +7,5 @@ mongoose.connect('mongodb+srv://database:nostrat@quotify-quotes.9pswg.mongodb.ne
      .then(() => console.log("Database is connected"))
      .catch((error) => console.log(error));
 
-
 module.exports = mongoose;
 
