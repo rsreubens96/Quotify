@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    
     "backend": "cd backend && node server.js",
     "public": "cd public && ng serve",
     "preinstall": "npm install -g @angular/cli",
@@ -15,7 +16,6 @@
     "concurrently": "^1.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1000.3",
     "dotenv": "^8.2.0"
   }
 }
