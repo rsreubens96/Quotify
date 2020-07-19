@@ -13,9 +13,8 @@
   "dependencies": {
     "@angular-devkit/build-angular": "^0.1000.3",
     "@angular/animations": "^9.1.12",
-    "@angular/cli": "^10.0.3",
     "@angular/common": "^9.1.12",
-    "@angular/compiler": "^10.0.4",
+    "@angular/cli": "^10.0.3",
     "@angular/compiler-cli": "^10.0.4",
     "@angular/core": "^9.1.12",
     "@angular/forms": "^9.1.12",
@@ -27,14 +26,14 @@
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "bootstrap": "^4.4.0",
     "bootstrap-scss": "^4.5.0",
-    "concurrently": "^1.0.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.9",
     "rxjs": "~6.5.4",
     "symbol-observable": "^1.2.0",
     "tslib": "^1.13.0",
+    "concurrently": "^1.0.0",
     "typescript": "^3.9.7",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
