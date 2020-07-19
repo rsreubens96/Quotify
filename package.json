@@ -13,8 +13,8 @@
   "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^1.0.0",
-    "@angular-devkit/build-angular": "^0.1000.3"
+    "concurrently": "^1.0.0"
+    "@angular-devkit/build-angular": "^0.1000.3",
   },
   "devDependencies": {
     "dotenv": "^8.2.0"
