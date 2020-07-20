@@ -1,1 +1,1 @@
-server: node server.js
+server: cd backend && node server.js
