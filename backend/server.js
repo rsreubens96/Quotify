@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const Quote = require('./db/models/quote');
 const mongoose = require('./db/mongoose');
-const Author = require('./db/models/author');
+// const Author = require('./db/models/author');
 
 
 app.use(express.json());
@@ -45,35 +45,35 @@ app.post('/quotes', (req, res) => {
         .catch((err) => console.log(err));
 });
 
-app.get('/authors', (req, res) => {
-    Author.find({})
-        .then(authors => res.send(authors))
-        .catch((err) => console.log(err));
-});
-
-app.get('/authors/:authorId', (req, res) => {
-    Quote.find({_id: req.params.authorId})
-        .then((author)=>res.send(author))
-        .catch((err) => console.log(err));
-});
-
-app.patch('/authors/:authorId', (req, res) => {
-    Quote.findOneAndUpdate({_id: req.params.authorId}, { $set: req.body })
-        .then((author)=>res.send(author))
-        .catch((err) => console.log(err));
-});
-
-app.delete('/authors/:authorId', (req, res) => {
-    Quote.deleteOne({_id: req.params.authorId})
-        .then((author)=>res.send(author))
-        .catch((err) => console.log(err));
-});
-
-app.post('/authors', (req, res) => {
-    const author = new Author({author:req.body.author});
-    author.save()
-        .then(author => res.send(author))
-        .catch((err) => console.log(err));
-});
+// app.get('/authors', (req, res) => {
+//     Author.find({})
+//         .then(authors => res.send(authors))
+//         .catch((err) => console.log(err));
+// });
+//
+// app.get('/authors/:authorId', (req, res) => {
+//     Quote.find({_id: req.params.authorId})
+//         .then((author)=>res.send(author))
+//         .catch((err) => console.log(err));
+// });
+//
+// app.patch('/authors/:authorId', (req, res) => {
+//     Quote.findOneAndUpdate({_id: req.params.authorId}, { $set: req.body })
+//         .then((author)=>res.send(author))
+//         .catch((err) => console.log(err));
+// });
+//
+// app.delete('/authors/:authorId', (req, res) => {
+//     Quote.deleteOne({_id: req.params.authorId})
+//         .then((author)=>res.send(author))
+//         .catch((err) => console.log(err));
+// });
+//
+// app.post('/authors', (req, res) => {
+//     const author = new Author({author:req.body.author});
+//     author.save()
+//         .then(author => res.send(author))
+//         .catch((err) => console.log(err));
+// });
 
 app.listen(process.env.PORT || 3000, () => console.log("Server Connected to default PORT"));
