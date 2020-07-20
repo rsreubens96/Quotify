@@ -5,7 +5,7 @@
   "scripts": {
     "backend": "cd backend && node server.js",
     "public": "cd public && ng serve",
-    "start": "concurrently \"npm run public\" \"npm run backend\" "
+    "start": "npm run public"
   },
   "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
   "license": "ISC",
