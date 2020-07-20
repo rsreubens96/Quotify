@@ -16,7 +16,6 @@ export class NavbarComponent implements OnInit {
     }
     htmlTag.setAttribute("data-theme", "dark");
   }
-
   ngOnInit(): void {
   }
 
