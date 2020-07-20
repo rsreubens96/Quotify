@@ -14,6 +14,7 @@ export class WebService {
   constructor(private http: HttpClient) {
     // this.ROOT_URL = "http://localhost:3000";
     this.ROOT_URL = "https://quotify200.herokuapp.com";
+    
    }
 
   get(uri: string) {
