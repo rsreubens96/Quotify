@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "backend": "cd backend && node server.js",
-    "public": "cd public && ng serve",
-    "start": "npm run backend"
+    "public": "cd public && ng serve"
   },
   "author": "Reuben Sarkar - Ashley Hayre + Reece Louch",
   "license": "ISC",
