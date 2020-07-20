@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const Quote = require('./db/models/quote');
 const mongoose = require('./db/mongoose');
-const Author = require('.db/models/author');
+const Author = require('./db/models/author');
 
 
 app.use(express.json());
