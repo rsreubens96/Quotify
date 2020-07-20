@@ -22,5 +22,4 @@ const QuotesSchema = new mongoose.Schema({
 });
 
 const quote = mongoose.model('Quote', QuotesSchema);
-
 module.exports = quote;
