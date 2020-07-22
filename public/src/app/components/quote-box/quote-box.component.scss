@@ -33,10 +33,11 @@
   box-shadow: 5px 5px 7px var(--colour-shadow2);
 
 }
-.fa-pencil-square-o {
-  color: var(--colour-black);
+
+.icons i {
+  color: var(--colour-dark-gray);
 }
-.fa-trash {
+.icons i:hover {
   color: var(--colour-black);
 }
 

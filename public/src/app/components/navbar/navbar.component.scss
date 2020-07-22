@@ -12,6 +12,26 @@
     color: var(--colour-white);
     text-decoration: none;
   }
+
   .dropdown-menu {
+    background-color: var(--colour-black)
+  }
+
+  .dropdown-menu b {
     background-color: var(--colour-black);
+    color: var(--colour-light-gray);
+    transition: ease-in-out color .15s;
+  }
+  .dropdown-menu b:hover {
+    background-color: var(--colour-black);
+    color: var(--colour-white);
+    text-decoration: none;
+  }
+  .dropdown-menu a {
+    color: var(--colour-light-gray);
+    transition: ease-in-out color .15s;
+  }
+  .dropdown-menu a:hover {
+    color: var(--colour-white);
+    text-decoration: none;
   }
